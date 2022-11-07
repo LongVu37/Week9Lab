@@ -3,7 +3,7 @@ package exceptions;
 
 /**
  *
- * @author Daniel Porter
+ * @author Long
  */
 public class InvalidFieldsException extends Exception {
     

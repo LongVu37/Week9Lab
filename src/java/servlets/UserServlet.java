@@ -31,20 +31,12 @@ public class UserServlet extends HttpServlet {
         UserService us = new UserService();
         RoleService rs = new RoleService();
         
-//        HttpSession session = request.getSession();
         
         String action = request.getParameter("action");
         
-        // initialize to false - not editing
         request.setAttribute("edit", false);
         
-        // so errors from last usage do't appear
-//        if (first) {
-//            session.setAttribute("error", null);
-//            first = false;
-//        }
         
-        // delete user
         if (action != null && action.equals("delete")) {
             String deleteEmail = request.getParameter("userEmail");
             
@@ -174,7 +166,6 @@ public class UserServlet extends HttpServlet {
         
         getServletContext().getRequestDispatcher("/WEB-INF/users.jsp").forward(request, response);
         
-//        response.sendRedirect(request.getContextPath() + "/user");
         
     }
 
